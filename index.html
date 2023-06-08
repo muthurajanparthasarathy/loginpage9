@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+    *
+    {
+      font-family: 'Poppins', sans-serif;
+    }
+    /* Custom styles for animation */
+    :root {
+      --bg-color: #ECF2FF;
+      --btnbg-color: #3E54AC;
+    }
+
+    .ab {
+      height: 100vh;
+      width: 100%;
+      padding: 0;
+    }
+
+    .video-player {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      /* border-radius: 50%; */
+      /* transform: rotate(90deg); */
+
+    }
+
+    button:hover {
+      background-color: var(--bg-color);
+      border: 3px solid #3E54AC;
+      color: #3E54AC;
+      transition: 0.4s;
+
+
+    }
+
+    button {
+      background-color: var(--btnbg-color);
+      color: var(--bg-color);
+      width: 100%;
+      height: 10vh;
+      transition: 0.4s;
+
+    }
+
+    h3 {
+      color: var(--btnbg-color);
+    }
+
+
+    input[type="text"],
+    input[type="password"] {
+      /* Add your styles here */
+      width: 100%;
+      height: 55px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+      outline: none;
+      color: black;
+    }
+
+    .s {
+      background-color:  var(--bg-color);
+      color:  var(--btnbg-color);
+    }
+
+    body,
+    html {
+      overflow-x: hidden;
+      overflow-y: hidden;
+
+    }
+
+    @media (max-width: 767px) {
+      .ab {
+        display: none;
+      }
+
+      .s {
+        height: 100vh;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="">
+    <div class="row">
+      <div class="col-md-7 col-lg-7 ab">
+        <!-- Animated Box -->
+        <video class="video-player" src="3dbox.mp4" autoplay loop muted></video>
+      </div>
+      <div class="col-md-5 col-lg-5 d-flex justify-content-center align-items-center s">
+        <!-- Login Section -->
+        <form class="w-75">
+          <h3>Log in</h3>
+          <div class="form-group  mt-5">
+            <label for="username">USERNAME</label>
+            <input type="text" class="form-control" id="username" placeholder="Username">
+          </div>
+          <div class="form-group mt-5">
+            <label for="password">PASSWORD</label>
+            <input type="password" class="form-control" id="password" placeholder="Password">
+          </div>
+          <button type="submit" class="btn  btn-lg w-100   mt-5">Log In Now</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
